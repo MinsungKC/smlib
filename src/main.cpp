@@ -1,4 +1,16 @@
 #include "main.h"
+#include "api.h"
+#include "subystems.hpp"
+
+
+smlib::DistanceSensor frontSensor(1, smlib::Side::front, 0, 0);
+smlib::DistanceSensor leftSensor(2, smlib::Side::left, 0, 0);
+smlib::DistanceSensor backSensor(3, smlib::Side::back, 0, 0);
+smlib::DistanceSensor rightSensor(4, smlib::Side::right, 0, 0);
+
+smlib::MCLsetup field(1200, 144, 144, 1.0, 1.0, 18, 18, {&frontSensor, &leftSensor, &backSensor, &rightSensor});
+
+
 
 /**
  * A callback function for LLEMU's center button.

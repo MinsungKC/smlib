@@ -75,6 +75,8 @@
 #include "pros/rtos.hpp"
 #include "pros/screen.hpp"
 #include "pros/vision.hpp"
+#include "smlib/api.hpp"
+#include "lemlib/api.hpp"
 #endif
 
 #endif  // _PROS_API_H_
